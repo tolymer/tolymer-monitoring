@@ -1,0 +1,26 @@
+{
+  "name": "tolymer-monitoring",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monitoring tolymer",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "NODE_ENV=production envchain aws-personal serverless deploy -v"
+  },
+  "dependencies": {
+    "@slack/webhook": "^5.0.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/node": "^10.12.18",
+    "@types/node-fetch": "^2.3.7",
+    "serverless": "^1.51.0",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0"
+  },
+  "license": "MIT"
+}

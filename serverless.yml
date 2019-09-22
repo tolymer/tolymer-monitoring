@@ -1,0 +1,25 @@
+service:
+  name: tolymer-monitoring
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+
+provider:
+  name: aws
+  stage: prod
+  runtime: nodejs10.x
+  region: ap-northeast-1
+  apiGateway:
+    logs: true
+
+custom:
+  webpack:
+    packager: 'yarn'
+    individually: true
+
+functions:
+  helloGrpcServer:
+    handler: handlers/helloGrpcServer.handler
+    events:
+      - schedule: cron(0 * * * ? *)

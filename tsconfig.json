@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es2017",
+    "outDir": "lib",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true
+  },
+  "exclude": ["node_modules"]
+}
