@@ -1,14 +1,9 @@
-function env(key: string): string;
-function env<T>(key: string, defaultValue: T): string | T;
-function env<T>(key: string, defaultValue?: T): string | T {
+function env(key: string): string {
   const val = process.env[key];
-  if (val !== undefined) {
-    return val;
-  } else if (defaultValue !== undefined) {
-    return defaultValue;
-  } else {
-    throw new Error(`ENV ${key} is required`);
+  if (val === undefined) {
+    throw new Error(`${key} is required`);
   }
+  return val;
 }
 
 export { env };
