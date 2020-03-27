@@ -4,7 +4,7 @@ import { postToSlack } from "../lib/Slack";
 import fetch from "node-fetch";
 
 export const handler: ScheduledHandler = async event => {
-  const endpoint = "https://grpc.tolymer.com/tolymer.v1.Events/GetEvent";
+  const endpoint = "https://tolymer-grpc.hokaccha.dev/tolymer.v1.Events/GetEvent";
   const res = await fetch(endpoint, {
     headers: {
       accept: "application/grpc-web-text",
